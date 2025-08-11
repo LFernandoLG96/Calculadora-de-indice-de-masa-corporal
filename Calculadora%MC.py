@@ -30,7 +30,7 @@ while True:
 
 #Podemos concatenar el/los nombres y los apellidos obtenidos hasta ahora para imprimir después el nombre completo. 
 nombre_C = nombre + ' ' + apellidoP + ' '+ apellidoM
-#Utilizamos el comando title para poner todas las letras de el/los nombres en mayusculas
+#Utilizamos el comando title para poner todas las primeras letras de el/los nombre/s y apellidos en mayusculas
 nombre_f = nombre_C.title()
 
 #Edad y verificación: Con el comando float cambiamos el tipo de la variable de cadena a decimales y con int a enteros. 
@@ -78,16 +78,16 @@ categoria = ''
 if imc < 18.49: 
   categoria = 'bajo de peso'
 elif 18.5 <= imc <= 24.99:
-  categoria = 'un peso normal' 
+  categoria = 'en un peso normal' 
 elif 25.0 <= imc <= 29.99:
-  categoria = 'pre-obesidad o Sobrepeso'
+  categoria = 'en pre-obesidad o Sobrepeso'
 elif 30.0 <= imc <= 34.99:
-  categoria = 'obesidad clase I'
+  categoria = 'en obesidad clase I'
 elif 35.00 <= imc <= 39.99:
-  categoria = 'obesidad clase II'
+  categoria = 'en obesidad clase II'
 else:
-  categoria = "obesidad morbida"
+  categoria = "en obesidad morbida"
 
 print(f'''Considerando los datos de la Organización mundial de la Salud,  
 dada tu estatura de {estatura} m, tu peso {peso} kg y tus {edad} años de edad.
- Te encuentras en {categoria}''')
+ Te encuentras {categoria}''')
