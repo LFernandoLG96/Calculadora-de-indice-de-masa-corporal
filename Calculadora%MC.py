@@ -42,8 +42,23 @@ while True:
     print('Por favor introduce tu estatura en digitos' )
 
 #Con la siguiente formula calculamos el indice de masa corporal
-imc = str(peso / (estatura ** 2))
+imc = float(peso / (estatura ** 2))
 
 #Con las siguientes lineas imprimmos el indice de masa corporal del usuario 
-print(f'Querido ' + nombre_f  + '. tu indice de masa corporal es de = ' +  imc  + '%')  
+print(f'Querido  {nombre_f} tu indice de masa corporal es de {imc:.2f} %')  
 
+#Categoría
+categoria = ''
+if imc < 18.4: 
+  categoria = 'bajo'
+elif 18.5 < imc < 24.9:
+  categoria = 'normal' 
+elif 25.0 < imc < 29.9:
+  categoria = 'sobre peso'
+elif 30.0 < imc < 34.9:
+  categoria = 'obesidad'
+else:
+  categoria = "obesidad morbida"
+
+print(f'''Considerando los datos de la Organización mundial de la salud \n 
+dado tu estatura de {estatura}, tu peso {peso} y edad {edad}. Te encuentras en {categoria}''')
